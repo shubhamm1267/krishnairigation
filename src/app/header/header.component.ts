@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,12 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  closeNavbar() {
+    const navbar = document.getElementById('navbarNav');
+    if (navbar?.classList.contains('show')) {
+      const collapseElement = new bootstrap.Collapse(navbar, { toggle: false });
+      collapseElement.hide();
+    }
+  }
+  
 }
