@@ -1,0 +1,56 @@
+<section class="hero-section">
+    <div class="hero-background">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Smart drip irrigation</h1>
+        <p class="hero-subtitle">
+          Saving water, increasing yield, sustaining farms for future
+        </p>
+        <button class="discover-btn">Discover More</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="testimonial-section">
+    <div class="testimonial-carousel">
+      <div
+        class="testimonial-item"
+        *ngFor="let t of testimonials; let i = index"
+        [class.active]="i === currentIndex"
+      >
+        <p class="testimonial-content">"{{ t.content }}"</p>
+        <p class="testimonial-author">{{ t.author }}</p>
+      </div>
+      <div class="testimonial-dots">
+        <span
+          *ngFor="let t of testimonials; let i = index"
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="setSlide(i)"
+        ></span>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="stats-section">
+    <div class="overlay">
+      <div class="stats-grid">
+        <div class="stat-box" *ngFor="let stat of stats">
+          <h2>{{ stat.count }}+</h2>
+          <p>{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="product-section">
+    <h2 class="section-title">Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of products">
+        <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+        <h3 class="product-name">{{ product.name }}</h3>
+      </div>
+    </div>
+  </section>
+  

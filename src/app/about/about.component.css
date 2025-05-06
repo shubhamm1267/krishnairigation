@@ -1,0 +1,6 @@
+/* About Styles */
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+    margin-top: 20px;
+}

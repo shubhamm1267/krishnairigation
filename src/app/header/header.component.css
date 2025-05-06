@@ -1,0 +1,29 @@
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+  }
+
+ul li a{
+    text-align:center
+}
+  
+nav{
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+}  
+  
+.navbar-brand{
+  color:black
+}
+
+  .nav-link.active {
+    border-bottom: 4px solid #28a745;
+    font-weight: bold;
+  }
+  
+  
+  
