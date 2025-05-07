@@ -6,6 +6,7 @@ import { CommonModule, Location } from '@angular/common';
 @Component({
   selector: 'app-product-details',
   imports: [CommonModule, RouterModule],
+  standalone:true,
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
